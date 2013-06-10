@@ -11,17 +11,33 @@ def vertical_spark(nums):
     '''
     parts = u' ▁▂▃▄▅▆▇█'
     fraction = max(nums) / float(len(parts) - 1)
+    # Replace each number with its appropriate part then join
     return ''.join(parts[int(round(x / fraction))] for x in nums)
 
 
-def horizontal_graph(nums, width=79):
+def horizontal_graph(nums, labels=False, width=79):
     '''
     Returns a horizontal graph from
     the list of integers num of width width
     '''
     parts = ['█' * i for i in range(0, width)]
     fraction = max(nums) / float(len(parts) - 1)
-    return ''.join(parts[int(round(x / fraction))] + "\n" for x in nums)
+
+    if labels:
+        # First pad labels
+        max_length = len(max(labels, key=len))
+        labels = [x + " " * (max_length - len(x)) for x in labels]
+
+        # Create Lines and output
+        out = ""
+        for i in range(len(nums)):
+            out = out + labels[i]
+            out = out + " " + parts[int(round(nums[i] / fraction))]
+            out = out + "\n"
+        return out
+
+    else:
+        return ''.join(parts[int(round(x / fraction))] + "\n" for x in nums)
 
 
 def vertical_graph(nums, height=10):
@@ -48,14 +64,15 @@ def vertical_graph(nums, height=10):
 
 if __name__ == "__main__":
     example = [12, 34, 45, 5, 16, 20]
+    labels = ['T', 'Test2', 'Test3', 'Test4', 'Test5', 'Test6']
 
     print "Vertical Spark"
     print vertical_spark(example)
 
     print "Horizontal Graph"
     print horizontal_graph(example)
-    print "Horizontal Graph, Width 20"
-    print horizontal_graph(example, 20)
+    print "Horizontal Graph with Labels, Width 20"
+    print horizontal_graph(example, labels, width=20)
 
     print "Vertical Graph"
     print vertical_graph(example)

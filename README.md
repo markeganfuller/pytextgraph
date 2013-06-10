@@ -10,14 +10,15 @@ Example Usage:
 import textgraph
 
 example = [12, 34, 45, 5, 16, 20]
+labels = ['T', 'Test2', 'Test3', 'Test4', 'Test5', 'Test6']
 
 print "Vertical Spark"
 print vertical_spark(example)
 
 print "Horizontal Graph"
 print horizontal_graph(example)
-print "Horizontal Graph, Width 20"
-print horizontal_graph(example, 20)
+print "Horizontal Graph with Labels, Width 20"
+print horizontal_graph(example, labels, width=20)
 
 print "Vertical Graph"
 print vertical_graph(example)
@@ -39,13 +40,13 @@ Horizontal Graph
 ████████████████████████████
 ███████████████████████████████████
 
-Horizontal Graph, Width 20
-█████
-██████████████
-███████████████████
-██
-███████
-████████
+Horizontal Graph with Labels, Width 20
+T     █████
+Test2 ██████████████
+Test3 ███████████████████
+Test4 ██
+Test5 ███████
+Test6 ████████
 
 Vertical Graph
 [3, 8, 10, 1, 4, 4]
