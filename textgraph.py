@@ -9,7 +9,7 @@ def vertical_spark(nums):
     Returns a vertical spark graph from
     the list of integers num
     '''
-    parts = u' ▁▂▃▄▅▆▇▉'
+    parts = u' ▁▂▃▄▅▆▇█'
     fraction = max(nums) / float(len(parts) - 1)
     return ''.join(parts[int(round(x / fraction))] for x in nums)
 
@@ -19,7 +19,7 @@ def horizontal_graph(nums, width=79):
     Returns a horizontal graph from
     the list of integers num of width width
     '''
-    parts = ['▉' * i for i in range(0, width)]
+    parts = ['█' * i for i in range(0, width)]
     fraction = max(nums) / float(len(parts) - 1)
     return ''.join(parts[int(round(x / fraction))] + "\n" for x in nums)
 
