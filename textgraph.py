@@ -16,7 +16,7 @@ def vertical_spark(nums):
 
 def horizontal_graph(nums, width=79):
     '''
-    Returns a horizontal spark graph from
+    Returns a horizontal graph from
     the list of integers num of width width
     '''
     parts = ['▉' * i for i in range(0, width)]
