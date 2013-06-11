@@ -6,21 +6,21 @@ EXAMPLE_LABELS = ['T', 'Test2', 'Test3', 'Test4', 'Test5', 'Test6']
 EXAMPLE_WIDTH = 20
 EXAMPLE_HEIGHT = 30
 
+import textgraph
+
 # Spark Graph
-from textgraph.graphs import spark
 print "Spark"
-print spark(EXAMPLE_DATA)
+print textgraph.spark(EXAMPLE_DATA)
 
 # Horizontal Graph
-from textgraph.graphs import horizontal_graph
 print "Horizontal Graph"
-print horizontal_graph(EXAMPLE_DATA)
+print textgraph.horizontal_graph(EXAMPLE_DATA)
 print "Horizontal Graph with Labels, Width %i" % EXAMPLE_WIDTH
-print horizontal_graph(EXAMPLE_DATA, EXAMPLE_LABELS, width=EXAMPLE_WIDTH)
+print textgraph.horizontal_graph(EXAMPLE_DATA, labels=EXAMPLE_LABELS,
+                                 width=EXAMPLE_WIDTH)
 
 # Vertical Graph
-from textgraph.graphs import vertical_graph
 print "Vertical Graph"
-print vertical_graph(EXAMPLE_DATA)
+print textgraph.vertical_graph(EXAMPLE_DATA)
 print "Vertical Graph, Height %i" % EXAMPLE_HEIGHT
-print vertical_graph(EXAMPLE_DATA, EXAMPLE_HEIGHT)
+print textgraph.vertical_graph(EXAMPLE_DATA, height=EXAMPLE_HEIGHT)

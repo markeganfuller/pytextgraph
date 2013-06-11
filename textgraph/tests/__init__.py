@@ -2,7 +2,7 @@
 '''
 Textgraph Tests
 '''
-from textgraph.graphs import spark, horizontal_graph, vertical_graph
+import textgraph
 
 
 def test_spark():
@@ -12,7 +12,7 @@ def test_spark():
     EXPECTED = u" ▁▂▃▄▅▆▇█"
     TEST_VALUES = [0, 1, 2, 3, 4, 5, 6, 7, 8]
 
-    spk = spark(TEST_VALUES)
+    spk = textgraph.spark(TEST_VALUES)
     print "-Spark"
     print spk
     print "-Expected"
@@ -39,7 +39,7 @@ def test_horizontal_graph():
     )
     TEST_VALUES = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 
-    grph = horizontal_graph(TEST_VALUES)
+    grph = textgraph.horizontal_graph(TEST_VALUES)
     print "-Graph"
     print grph
     print "-Expected"
@@ -68,7 +68,7 @@ def test_horizontal_graph_labels():
     TEST_LABELS = ['Test0', 'T1', 'Test2', 'Test3', 'Test4', 'Test5', 'Test6',
                    'Test7', 'Test8', 'Test9', 'Test10']
 
-    grph = horizontal_graph(TEST_VALUES, TEST_LABELS)
+    grph = textgraph.horizontal_graph(TEST_VALUES, labels=TEST_LABELS)
     print "-Graph"
     print grph
     print "-Expected"
@@ -96,7 +96,7 @@ def test_horizontal_graph_width():
     TEST_VALUES = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
     TEST_WIDTH = 20
 
-    grph = horizontal_graph(TEST_VALUES, width=TEST_WIDTH)
+    grph = textgraph.horizontal_graph(TEST_VALUES, width=TEST_WIDTH)
     print "-Graph"
     print grph
     print "-Expected"
@@ -122,7 +122,7 @@ def test_vertical_graph():
         u" ▉▉▉▉▉▉▉▉▉▉\n")
     TEST_VALUES = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 
-    grph = vertical_graph(TEST_VALUES)
+    grph = textgraph.vertical_graph(TEST_VALUES)
     print "-Graph"
     print grph
     print "-Expected"
@@ -144,7 +144,7 @@ def test_vertical_graph_height():
     TEST_VALUES = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
     TEST_HEIGHT = 5
 
-    grph = vertical_graph(TEST_VALUES, TEST_HEIGHT)
+    grph = textgraph.vertical_graph(TEST_VALUES, height=TEST_HEIGHT)
     print "-Graph"
     print grph
     print "-Expected"
