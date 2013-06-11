@@ -12,13 +12,14 @@ setup(name='textgraph',
       classifiers=[
           'Development Status :: 2 - Pre-Alpha',
           'Programming Language :: Python :: 2.7',
-          'Intended Audience :: Developers'
+          'Intended Audience :: Developers',
+          'License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)'
       ],
       keywords='text graph textgraph asciigraph',
       url='https://github.com/markeganfuller/pytextgraph',
       author='Mark Egan-Fuller',
       author_email='markeganfuller@googlemail.com',
-      license='',
+      license='GPLv3+',
       packages=['textgraph'],
       zip_safe=False,
       test_suite='nose.collector',
