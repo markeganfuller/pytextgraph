@@ -1,36 +1,17 @@
-PyTextGraph
-===========
+TextGraph
+=========
 
-Simple text graphs, originally just UTF-8 Spark Graph by @rory.
+Library for generating text graphs.
 
+Based on code by Rory McCann https://github.com/rory
 
-Example Usage:
+See `examples.py` for usage examples.
 
-```python
-import textgraph
-
-example = [12, 34, 45, 5, 16, 20]
-labels = ['T', 'Test2', 'Test3', 'Test4', 'Test5', 'Test6']
-
-print "Vertical Spark"
-print vertical_spark(example)
-
-print "Horizontal Graph"
-print horizontal_graph(example)
-print "Horizontal Graph with Labels, Width 20"
-print horizontal_graph(example, labels, width=20)
-
-print "Vertical Graph"
-print vertical_graph(example)
-print "Vertical Graph, Height 30"
-print vertical_graph(example, 30)
-```
-
-Output:
+Example Output (from `examples.py`):
 
 ```bash
-$ python textgraph.py
-Vertical Spark
+$ python examples.py
+Spark
 ▂▆█▁▃▄
 Horizontal Graph
 █████████████████████
@@ -49,7 +30,7 @@ Test5 ███████
 Test6 ████████
 
 Vertical Graph
-[3, 8, 10, 1, 4, 4]
+  ▉   
   ▉   
  ▉▉   
  ▉▉   
@@ -58,11 +39,10 @@ Vertical Graph
  ▉▉ ▉▉
 ▉▉▉ ▉▉
 ▉▉▉ ▉▉
-▉▉▉▉▉▉
 ▉▉▉▉▉▉
 
 Vertical Graph, Height 30
-[8, 23, 30, 3, 11, 13]
+  ▉   
   ▉   
   ▉   
   ▉   
@@ -92,5 +72,5 @@ Vertical Graph, Height 30
 ▉▉▉▉▉▉
 ▉▉▉▉▉▉
 ▉▉▉▉▉▉
-▉▉▉▉▉▉
+
 ```
