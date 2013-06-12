@@ -5,6 +5,11 @@ Library for generating text graphs.
 
 Based on code by Rory McCann https://github.com/rory
 
+Install
+```
+pip install textgraph
+```
+
 See `examples.py` for usage examples.
 
 Example Output (from `examples.py`):
