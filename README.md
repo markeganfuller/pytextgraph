@@ -79,3 +79,7 @@ Vertical Graph, Height 30
 ▉▉▉▉▉▉
 
 ```
+
+Versions
+--------
+0.1 - Initial Release
