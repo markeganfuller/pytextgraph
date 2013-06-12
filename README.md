@@ -82,4 +82,5 @@ Vertical Graph, Height 30
 
 Versions
 --------
-0.1 - Initial Release
+* 0.2 - Improved Docstrings
+* 0.1 - Initial Release

@@ -1,14 +1,16 @@
 # coding: utf-8
-'''
+"""
 Graphs
-'''
+"""
 
 
 def spark(nums):
-    '''
-    Returns a vertical spark graph from
-    the list of integers num
-    '''
+    """
+    Returns a vertical spark graph from a list of integers.
+
+    nums -- list of integers to graph
+
+    """
     parts = u' ▁▂▃▄▅▆▇█'
     fraction = max(nums) / float(len(parts) - 1)
     # Replace each number with its appropriate part then join
@@ -16,10 +18,15 @@ def spark(nums):
 
 
 def horizontal_graph(nums, labels=False, width=79):
-    '''
-    Returns a horizontal graph from
-    the list of integers num of width width
-    '''
+    """
+    Returns a horizontal graph from a list of integers, either labelled or
+    unlabeled. A specific width can be given
+
+    nums -- list of integers to graph
+    labels -- list of strings that correspond to the data
+    width -- width of the largest bar (int)
+
+    """
     parts = ['█' * i for i in range(0, width)]
     fraction = max(nums) / float(len(parts) - 1)
 
@@ -41,10 +48,14 @@ def horizontal_graph(nums, labels=False, width=79):
 
 
 def vertical_graph(nums, height=10):
-    '''
-    Returns a vertical graph from
-    the list of intergers nums of height height
-    '''
+    """
+    Returns a vertical graph from a list of integers.
+    Height of the graph can be specified.
+
+    nums -- list of integers to graph
+    height -- height of largest bar (int)
+
+    """
     character = '▉'
     fraction = max(nums) / float(height)
     nums = [int(round(n / fraction)) for n in nums]

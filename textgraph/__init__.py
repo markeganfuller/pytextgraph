@@ -1,18 +1,31 @@
-'''
-Python Text Graphing Module
-'''
+# coding: UTF-8
+"""
+Python Text Graphing
 
+Creates text based graphs from integer lists.
 
-def spark(nums):
-    from textgraph.graphs import spark
-    return spark(nums)
+Example:
+    data = [1,2,3]
+    print textgraph.spark(data)
+    ▂▆█
 
+Graph Types
 
-def horizontal_graph(nums, **kwargs):
-    from textgraph.graphs import horizontal_graph
-    return horizontal_graph(nums, **kwargs)
+-Spark
+    ▂▆█
 
+-Horizontal
+    █████████
+    ███████████████████████
 
-def vertical_graph(nums, **kwargs):
-    from textgraph.graphs import vertical_graph
-    return vertical_graph(nums, **kwargs)
+-Vertical
+     ▉
+     ▉
+    ▉▉
+    ▉▉
+    ▉▉
+    ▉▉
+    ▉▉ ▉▉
+"""
+
+from .graphs import spark, horizontal_graph, vertical_graph

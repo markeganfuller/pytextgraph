@@ -5,12 +5,12 @@ from setuptools import setup
 import multiprocessing
 
 setup(name='textgraph',
-      version='0.1',
+      version='0.2',
       description='Library for creating text based graphs',
       long_description=('Library for creating text based graphs, '
                         'including spark and bar graphs'),
       classifiers=[
-          'Development Status :: 2 - Pre-Alpha',
+          'Development Status :: 3 - Alpha',
           'Programming Language :: Python :: 2.7',
           'Intended Audience :: Developers',
           'License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)'
