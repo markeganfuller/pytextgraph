@@ -3,6 +3,8 @@
 Graphs
 """
 
+import math
+
 
 def spark(nums):
     """
@@ -58,10 +60,10 @@ def vertical_graph(nums, height=10):
     """
     character = '▉'
     fraction = max(nums) / float(height)
-    nums = [int(round(n / fraction)) for n in nums]
+    nums = [int(math.ceil(n / fraction)) for n in nums]
 
     out = ""
-    row_numbers = range(1, height + 1)
+    row_numbers = list(range(1, height + 1))
     row_numbers.reverse()
     for i in row_numbers:
         for n in nums:

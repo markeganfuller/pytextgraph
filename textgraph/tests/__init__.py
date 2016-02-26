@@ -13,10 +13,10 @@ def test_spark():
     TEST_VALUES = [0, 1, 2, 3, 4, 5, 6, 7, 8]
 
     spk = textgraph.spark(TEST_VALUES)
-    print "-Spark"
-    print spk
-    print "-Expected"
-    print EXPECTED
+    print("-Spark")
+    print(spk)
+    print("-Expected")
+    print(EXPECTED)
     assert spk == EXPECTED
 
 
@@ -40,12 +40,12 @@ def test_horizontal_graph():
     TEST_VALUES = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 
     grph = textgraph.horizontal_graph(TEST_VALUES)
-    print "-Graph"
-    print grph
-    print "-Expected"
-    print EXPECTED
-    print "-"
-    assert grph.decode('UTF-8') == EXPECTED
+    print("-Graph")
+    print(grph)
+    print("-Expected")
+    print(EXPECTED)
+    print("-")
+    assert grph == EXPECTED
 
 
 def test_horizontal_graph_labels():
@@ -69,12 +69,12 @@ def test_horizontal_graph_labels():
                    'Test7', 'Test8', 'Test9', 'Test10']
 
     grph = textgraph.horizontal_graph(TEST_VALUES, labels=TEST_LABELS)
-    print "-Graph"
-    print grph
-    print "-Expected"
-    print EXPECTED
-    print "-"
-    assert grph.decode('UTF-8') == EXPECTED
+    print("-Graph")
+    print(grph)
+    print("-Expected")
+    print(EXPECTED)
+    print("-")
+    assert grph == EXPECTED
 
 
 def test_horizontal_graph_width():
@@ -97,12 +97,12 @@ def test_horizontal_graph_width():
     TEST_WIDTH = 20
 
     grph = textgraph.horizontal_graph(TEST_VALUES, width=TEST_WIDTH)
-    print "-Graph"
-    print grph
-    print "-Expected"
-    print EXPECTED
-    print "-"
-    assert grph.decode('UTF-8') == EXPECTED
+    print("-Graph")
+    print(grph)
+    print("-Expected")
+    print(EXPECTED)
+    print("-")
+    assert grph == EXPECTED
 
 
 def test_vertical_graph():
@@ -123,12 +123,12 @@ def test_vertical_graph():
     TEST_VALUES = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 
     grph = textgraph.vertical_graph(TEST_VALUES)
-    print "-Graph"
-    print grph
-    print "-Expected"
-    print EXPECTED
-    print "-"
-    assert grph.decode('UTF-8') == EXPECTED
+    print("-Graph")
+    print(grph)
+    print("-Expected")
+    print(EXPECTED)
+    print("-")
+    assert grph == EXPECTED
 
 
 def test_vertical_graph_height():
@@ -145,9 +145,9 @@ def test_vertical_graph_height():
     TEST_HEIGHT = 5
 
     grph = textgraph.vertical_graph(TEST_VALUES, height=TEST_HEIGHT)
-    print "-Graph"
-    print grph
-    print "-Expected"
-    print EXPECTED
-    print "-"
-    assert grph.decode('UTF-8') == EXPECTED
+    print("-Graph")
+    print(grph)
+    print("-Expected")
+    print(EXPECTED)
+    print("-")
+    assert grph == EXPECTED
