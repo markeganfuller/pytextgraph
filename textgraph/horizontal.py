@@ -1,8 +1,11 @@
 # coding: utf-8
 """Pytextgraphs."""
 
+import textgraph
 
-def horizontal(nums, labels=False, width=79, character='█'):
+
+def horizontal(nums, labels=False, width=textgraph.util.terminal_width(),
+               character='█'):
     """
     Return a horizontal graph from a list of integers.
 

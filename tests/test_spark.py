@@ -1,5 +1,4 @@
-# coding:utf-8
-"""Textgraph tests."""
+"""Textgraph spark tests."""
 import textgraph
 
 

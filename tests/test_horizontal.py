@@ -1,5 +1,4 @@
-# coding:utf-8
-"""Textgraph tests."""
+"""Textgraph horizontal tests."""
 import textgraph
 
 
@@ -19,8 +18,10 @@ def test_horizontal():
         "██████████████████████████████████████████████████████████████████████████████\n"
     )
     test_values = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+    width = 79
 
-    grph = textgraph.horizontal(test_values)
+    # Note we force a width here so it doesn't change based on terminal size
+    grph = textgraph.horizontal(test_values, width=width)
     print("-Graph")
     print(grph)
     print("-Expected")
@@ -46,8 +47,10 @@ def test_horizontal_labels():
     test_values = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
     test_labels = ['Test0', 'T1', 'Test2', 'Test3', 'Test4', 'Test5', 'Test6',
                    'Test7', 'Test8', 'Test9', 'Test10']
+    width = 79
 
-    grph = textgraph.horizontal(test_values, labels=test_labels)
+    # Note we force a width here so it doesn't change based on terminal size
+    grph = textgraph.horizontal(test_values, labels=test_labels, width=width)
     print("-Graph")
     print(grph)
     print("-Expected")
