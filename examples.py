@@ -15,10 +15,10 @@ print(textgraph.spark(EXAMPLE_DATA))
 
 # Horizontal Graph
 print("Horizontal Graph")
-print(textgraph.horizontal_graph(EXAMPLE_DATA))
+print(textgraph.horizontal(EXAMPLE_DATA))
 print(f"Horizontal Graph with Labels, Width {EXAMPLE_WIDTH}")
 print(
-    textgraph.horizontal_graph(
+    textgraph.horizontal(
         EXAMPLE_DATA,
         labels=EXAMPLE_LABELS,
         width=EXAMPLE_WIDTH
@@ -27,6 +27,6 @@ print(
 
 # Vertical Graph
 print("Vertical Graph")
-print(textgraph.vertical_graph(EXAMPLE_DATA))
+print(textgraph.vertical(EXAMPLE_DATA))
 print(f"Vertical Graph, Height {EXAMPLE_HEIGHT}")
-print(textgraph.vertical_graph(EXAMPLE_DATA, height=EXAMPLE_HEIGHT))
+print(textgraph.vertical(EXAMPLE_DATA, height=EXAMPLE_HEIGHT))
