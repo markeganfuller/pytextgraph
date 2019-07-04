@@ -4,12 +4,11 @@ from setuptools import setup
 
 setup(
     name='textgraph',
-    version='0.4.0',
+    version='1.0.0',
     description='Library for creating text based graphs',
     long_description=('Library for creating text based graphs, '
                       'including spark and bar graphs'),
     classifiers=[
-        'Development Status :: 4 - Beta',
         'Programming Language :: Python :: 3 :: Only',
         'Intended Audience :: Developers',
         'License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)'
