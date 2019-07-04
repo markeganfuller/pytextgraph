@@ -5,4 +5,6 @@ Python Text Graphing.
 Creates text based graphs from integer lists.
 """
 
-from .graphs import spark, horizontal_graph, vertical_graph
+from .spark import spark
+from .horizontal import horizontal
+from .vertical import vertical
