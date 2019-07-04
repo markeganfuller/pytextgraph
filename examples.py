@@ -4,7 +4,14 @@
 import textgraph
 
 EXAMPLE_DATA = [12, 34, 45, 5, 16, 20]
-EXAMPLE_LABELS = ['T1', 'Test2', 'Test3', 'Test4', 'Test5', 'Test6']
+EXAMPLE_DATA_LABELLED = [
+    ('T1', 12),
+    ('Test2', 12),
+    ('Test3', 12),
+    ('Test4', 12),
+    ('Test5', 12),
+    ('Test6', 12)
+]
 EXAMPLE_WIDTH = 20
 EXAMPLE_HEIGHT = 30
 
@@ -19,8 +26,7 @@ print(textgraph.horizontal(EXAMPLE_DATA))
 print(f"Horizontal Graph with Labels, Width {EXAMPLE_WIDTH}")
 print(
     textgraph.horizontal(
-        EXAMPLE_DATA,
-        labels=EXAMPLE_LABELS,
+        EXAMPLE_DATA_LABELLED,
         width=EXAMPLE_WIDTH
     )
 )
