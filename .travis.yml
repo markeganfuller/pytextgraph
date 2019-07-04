@@ -1,9 +1,11 @@
+dist: xenial
 language: python
 python:
-  - "3.3"
-  - "3.4"
   - "3.5"
-  - "3.5-dev" # 3.5 development branch
-  - "nightly" # currently points to 3.6-dev
-# command to run tests
-script: python setup.py test
+  - "3.6"
+  - "3.7"
+  - "nightly"
+install:
+  - pip install -r requirements.txt
+  - python setup.py develop
+script: pytest --cov=textgraph --cov-fail-under=100 --no-cov-on-fail

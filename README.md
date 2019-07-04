@@ -1,14 +1,14 @@
-TextGraph
-=========
+# TextGraph
 
 [![Build Status](https://travis-ci.org/markeganfuller/pytextgraph.svg?branch=master)](https://travis-ci.org/markeganfuller/pytextgraph)
 
 Library for generating text graphs.
 
-Based on code by Rory McCann https://github.com/rory
+Based on code by Rory McCann <https://github.com/rory>
 
-Install
-```
+## Install
+
+```bash
 pip install textgraph
 ```
 
@@ -79,10 +79,4 @@ Vertical Graph, Height 30
 ▉▉▉▉▉▉
 ▉▉▉▉▉▉
 ▉▉▉▉▉▉
-
 ```
-
-Versions
---------
-* 0.2 - Improved Docstrings
-* 0.1 - Initial Release
