@@ -3,21 +3,8 @@
 import textgraph
 
 
-def test_spark():
-    """Test output of spark."""
-    expected = " ▁▂▃▄▅▆▇█"
-    test_values = [0, 1, 2, 3, 4, 5, 6, 7, 8]
-
-    spk = textgraph.spark(test_values)
-    print("-Spark")
-    print(spk)
-    print("-Expected")
-    print(expected)
-    assert spk == expected
-
-
-def test_horizontal_graph():
-    """Test basic horizontal_graph output."""
+def test_horizontal():
+    """Test basic horizontal output."""
     expected = (
         "\n"
         "████████\n"
@@ -33,7 +20,7 @@ def test_horizontal_graph():
     )
     test_values = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 
-    grph = textgraph.horizontal_graph(test_values)
+    grph = textgraph.horizontal(test_values)
     print("-Graph")
     print(grph)
     print("-Expected")
@@ -42,8 +29,8 @@ def test_horizontal_graph():
     assert grph == expected
 
 
-def test_horizontal_graph_labels():
-    """Test labeled horizontal_graph output."""
+def test_horizontal_labels():
+    """Test labeled horizontal output."""
     expected = (
         "Test0  \n"
         "T1     ████████\n"
@@ -60,7 +47,7 @@ def test_horizontal_graph_labels():
     test_labels = ['Test0', 'T1', 'Test2', 'Test3', 'Test4', 'Test5', 'Test6',
                    'Test7', 'Test8', 'Test9', 'Test10']
 
-    grph = textgraph.horizontal_graph(test_values, labels=test_labels)
+    grph = textgraph.horizontal(test_values, labels=test_labels)
     print("-Graph")
     print(grph)
     print("-Expected")
@@ -69,8 +56,8 @@ def test_horizontal_graph_labels():
     assert grph == expected
 
 
-def test_horizontal_graph_width():
-    """Test different width horizontal_graph output."""
+def test_horizontal_width():
+    """Test different width horizontal output."""
     expected = (
         "\n"
         "██\n"
@@ -84,9 +71,9 @@ def test_horizontal_graph_width():
         "█████████████████\n"
         "███████████████████\n")
     test_values = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
-    test_width = 20
+    width = 20
 
-    grph = textgraph.horizontal_graph(test_values, width=test_width)
+    grph = textgraph.horizontal(test_values, width=width)
     print("-Graph")
     print(grph)
     print("-Expected")
@@ -95,42 +82,25 @@ def test_horizontal_graph_width():
     assert grph == expected
 
 
-def test_vertical_graph():
-    """Test vertical_graph output."""
+def test_horizontal_character():
+    """Test horizontal character."""
     expected = (
-        "          ▉\n"
-        "         ▉▉\n"
-        "        ▉▉▉\n"
-        "       ▉▉▉▉\n"
-        "      ▉▉▉▉▉\n"
-        "     ▉▉▉▉▉▉\n"
-        "    ▉▉▉▉▉▉▉\n"
-        "   ▉▉▉▉▉▉▉▉\n"
-        "  ▉▉▉▉▉▉▉▉▉\n"
-        " ▉▉▉▉▉▉▉▉▉▉\n")
+        "\n"
+        "◍◍\n"
+        "◍◍◍◍\n"
+        "◍◍◍◍◍◍\n"
+        "◍◍◍◍◍◍◍◍\n"
+        "◍◍◍◍◍◍◍◍◍◍\n"
+        "◍◍◍◍◍◍◍◍◍◍◍\n"
+        "◍◍◍◍◍◍◍◍◍◍◍◍◍\n"
+        "◍◍◍◍◍◍◍◍◍◍◍◍◍◍◍\n"
+        "◍◍◍◍◍◍◍◍◍◍◍◍◍◍◍◍◍\n"
+        "◍◍◍◍◍◍◍◍◍◍◍◍◍◍◍◍◍◍◍\n")
     test_values = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+    width = 20
+    character = '◍'
 
-    grph = textgraph.vertical_graph(test_values)
-    print("-Graph")
-    print(grph)
-    print("-Expected")
-    print(expected)
-    print("-")
-    assert grph == expected
-
-
-def test_vertical_graph_height():
-    """Test height of vertical_graph output."""
-    expected = (
-        "         ▉▉\n"
-        "       ▉▉▉▉\n"
-        "     ▉▉▉▉▉▉\n"
-        "   ▉▉▉▉▉▉▉▉\n"
-        " ▉▉▉▉▉▉▉▉▉▉\n")
-    test_values = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
-    test_height = 5
-
-    grph = textgraph.vertical_graph(test_values, height=test_height)
+    grph = textgraph.horizontal(test_values, width=width, character=character)
     print("-Graph")
     print(grph)
     print("-Expected")
