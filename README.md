@@ -2,9 +2,11 @@
 
 [![Build Status](https://travis-ci.org/markeganfuller/pytextgraph.svg?branch=master)](https://travis-ci.org/markeganfuller/pytextgraph)
 
-Library for generating text graphs.
+Python library for generating simple text graphs.
 
-Based on code by Rory McCann <https://github.com/rory>
+Based on code by [Rory McCann](https://github.com/rory)
+
+![asciicast](asciicast.gif)
 
 ## Install
 
@@ -12,71 +14,14 @@ Based on code by Rory McCann <https://github.com/rory>
 pip install textgraph
 ```
 
-See `examples.py` for usage examples.
+## Usage
 
-Example Output (from `examples.py`):
+```python
+import textgraph
 
-```bash
-$ python examples.py
-Spark
-▂▆█▁▃▄
-Horizontal Graph
-█████████████████████
-███████████████████████████████████████████████████████████
-██████████████████████████████████████████████████████████████████████████████
-█████████
-████████████████████████████
-███████████████████████████████████
+data = [12, 5, 2, 7]
 
-Horizontal Graph with Labels, Width 20
-T     █████
-Test2 ██████████████
-Test3 ███████████████████
-Test4 ██
-Test5 ███████
-Test6 ████████
-
-Vertical Graph
-  ▉
-  ▉
- ▉▉
- ▉▉
- ▉▉
- ▉▉
- ▉▉ ▉▉
-▉▉▉ ▉▉
-▉▉▉ ▉▉
-▉▉▉▉▉▉
-
-Vertical Graph, Height 30
-  ▉
-  ▉
-  ▉
-  ▉
-  ▉
-  ▉
-  ▉
- ▉▉
- ▉▉
- ▉▉
- ▉▉
- ▉▉
- ▉▉
- ▉▉
- ▉▉
- ▉▉
- ▉▉
- ▉▉  ▉
- ▉▉  ▉
- ▉▉ ▉▉
- ▉▉ ▉▉
- ▉▉ ▉▉
-▉▉▉ ▉▉
-▉▉▉ ▉▉
-▉▉▉ ▉▉
-▉▉▉ ▉▉
-▉▉▉ ▉▉
-▉▉▉▉▉▉
-▉▉▉▉▉▉
-▉▉▉▉▉▉
+print(textgraph.spark(data))
 ```
+
+See more examples in `examples.py`
