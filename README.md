@@ -1,6 +1,7 @@
 # TextGraph
 
 [![Build Status](https://travis-ci.org/markeganfuller/pytextgraph.svg?branch=master)](https://travis-ci.org/markeganfuller/pytextgraph)
+[![codecov](https://codecov.io/gh/markeganfuller/pytextgraph/branch/master/graph/badge.svg)](https://codecov.io/gh/markeganfuller/pytextgraph)
 
 Python library for generating simple text graphs.
 
