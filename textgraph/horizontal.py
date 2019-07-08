@@ -40,9 +40,9 @@ def horizontal(data, width=textgraph.util.terminal_width(),
 
         # Create Lines and output
         out = ""
-        for i in range(len(nums)):
-            out = out + labels[i]
-            out = out + " " + parts[int(round(nums[i] / fraction))]
+        for index, value in enumerate(nums):
+            out = out + labels[index]
+            out = out + " " + parts[int(round(value / fraction))]
             out = out + "\n"
         return out
 
