@@ -6,11 +6,11 @@ import textgraph
 EXAMPLE_DATA = [12, 34, 45, 5, 16, 20]
 EXAMPLE_DATA_LABELLED = [
     ('T1', 12),
-    ('Test2', 12),
-    ('Test3', 12),
-    ('Test4', 12),
-    ('Test5', 12),
-    ('Test6', 12)
+    ('Test2', 34),
+    ('Test3', 45),
+    ('Test4', 5),
+    ('Test5', 16),
+    ('Test6', 20)
 ]
 EXAMPLE_WIDTH = 20
 EXAMPLE_HEIGHT = 30
@@ -23,7 +23,7 @@ print(textgraph.spark(EXAMPLE_DATA))
 # Horizontal Graph
 print("Horizontal Graph")
 print(textgraph.horizontal(EXAMPLE_DATA))
-print(f"Horizontal Graph with Labels, Width {EXAMPLE_WIDTH}")
+print("Horizontal Graph with Labels, Width {}".format(EXAMPLE_WIDTH))
 print(
     textgraph.horizontal(
         EXAMPLE_DATA_LABELLED,
@@ -34,5 +34,5 @@ print(
 # Vertical Graph
 print("Vertical Graph")
 print(textgraph.vertical(EXAMPLE_DATA))
-print(f"Vertical Graph, Height {EXAMPLE_HEIGHT}")
+print("Vertical Graph, Height {}".format(EXAMPLE_HEIGHT))
 print(textgraph.vertical(EXAMPLE_DATA, height=EXAMPLE_HEIGHT))
