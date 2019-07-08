@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.0.1
+
+* Add flake8 tests and fix issues.
+
 ## 1.0.0
 
 * Upgrade to Python3
