@@ -2,10 +2,10 @@
 """Pytextgraphs."""
 
 import collections
-import textgraph
+import shutil
 
 
-def horizontal(data, width=textgraph.util.terminal_width(),
+def horizontal(data, width=shutil.get_terminal_size().columns,
                character='█'):
     """
     Return a horizontal graph from a list of integers.
