@@ -1,5 +1,11 @@
 # Changelog
 
+## 2.0.0
+
+* Support Windows / OSX by changing from stty to shutil.get_terminal_size
+* Update requirements (Only needed for development)
+* Update travis tests to include windows, OSX and more versions.
+
 ## 1.0.1
 
 * Add flake8 tests and fix issues.
