@@ -1,5 +1,11 @@
 # Changelog
 
+## 3.0.0
+
+* Change default branch to main
+* Update requirements (Only needed for development)
+* Move from Travis to Github Actions
+
 ## 2.0.0
 
 * Support Windows / OSX by changing from stty to shutil.get_terminal_size

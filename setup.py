@@ -6,7 +6,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name='textgraph',
-    version='2.0.0',
+    version='3.0.0',
     author='Mark Egan-Fuller',
     author_email='markeganfuller@googlemail.com',
     description='Library for creating text based graphs',
