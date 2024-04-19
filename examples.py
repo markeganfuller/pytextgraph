@@ -18,7 +18,9 @@ EXAMPLE_HEIGHT = 30
 
 # Spark Graph
 print("Spark")
-print(textgraph.spark(EXAMPLE_DATA))
+print(textgraph.spark_char_per_value(EXAMPLE_DATA))
+print("Spark 2 values per character")
+print(textgraph.spark_char_per_2_values(EXAMPLE_DATA))
 
 # Horizontal Graph
 print("Horizontal Graph")
